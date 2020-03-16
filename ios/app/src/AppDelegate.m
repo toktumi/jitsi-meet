@@ -24,7 +24,6 @@
 @import Firebase;
 @import JitsiMeet;
 
-
 @implementation AppDelegate
 
 -             (BOOL)application:(UIApplication *)application
@@ -53,6 +52,9 @@
         [builder setFeatureFlag:@"ios.recording.enabled" withBoolean:YES];
 #endif
     }];
+
+    // Add pause so the splash screen diplays at startup.
+    sleep(1);
 
     [jitsiMeet application:application didFinishLaunchingWithOptions:launchOptions];
 
