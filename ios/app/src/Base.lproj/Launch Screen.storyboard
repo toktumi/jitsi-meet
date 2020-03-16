@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="mQt-JN-CLW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="mQt-JN-CLW">
+                                <rect key="frame" x="40" y="0.0" width="334" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.62745098040000002" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mQt-JN-CLW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="0w5-jp-8Am"/>
+                            <constraint firstItem="mQt-JN-CLW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="40" id="0w5-jp-8Am"/>
                             <constraint firstAttribute="bottom" secondItem="mQt-JN-CLW" secondAttribute="bottom" id="3Yk-Uv-NpX"/>
-                            <constraint firstAttribute="trailing" secondItem="mQt-JN-CLW" secondAttribute="trailing" id="RJm-pd-fjI"/>
+                            <constraint firstAttribute="trailing" secondItem="mQt-JN-CLW" secondAttribute="trailing" constant="40" id="RJm-pd-fjI"/>
                             <constraint firstItem="mQt-JN-CLW" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZN7-K1-5ab"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
