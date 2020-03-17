@@ -53,6 +53,9 @@
 #endif
     }];
 
+    // Force longer display of the spalsh screen on first lanuch.
+    sleep(3);
+
     [jitsiMeet application:application didFinishLaunchingWithOptions:launchOptions];
 
     return YES;
