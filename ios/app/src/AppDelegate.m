@@ -53,9 +53,6 @@
 #endif
     }];
 
-    // Add pause so the splash screen diplays at startup.
-    sleep(1);
-
     [jitsiMeet application:application didFinishLaunchingWithOptions:launchOptions];
 
     return YES;
