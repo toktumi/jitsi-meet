@@ -53,7 +53,7 @@ public class MainActivity extends JitsiMeetActivity {
 
     @Override
     protected boolean extraInitialize() {
-        Log.d(this.getClass().getSimpleName(), "LIBRE_BUILD="+BuildConfig.LIBRE_BUILD);
+        Log.d(this.getClass().getSimpleName(), "LIBRE_BUILD="+ BuildConfig.LIBRE_BUILD);
 
         // Setup Crashlytics and Firebase Dynamic Links
         // Here we are using reflection since it may have been disabled at compile time.
@@ -89,7 +89,7 @@ public class MainActivity extends JitsiMeetActivity {
         JitsiMeetConferenceOptions defaultOptions
             = new JitsiMeetConferenceOptions.Builder()
                 .setWelcomePageEnabled(true)
-                .setServerURL(buildURL("https://meet.jit.si"))
+                .setServerURL(buildURL("https://j2meet.evoice.com"))
                 .setFeatureFlag("call-integration.enabled", false)
                 .build();
         JitsiMeet.setDefaultConferenceOptions(defaultOptions);
