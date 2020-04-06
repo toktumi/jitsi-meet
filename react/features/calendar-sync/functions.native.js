@@ -25,7 +25,7 @@ export * from './functions.any';
 export function addLinkToCalendarEntry(
         state: Object, id: string, link: string): Promise<any> {
     return new Promise((resolve, reject) => {
-        getShareInfoText(state, link, true).then(shareInfoText => {
+        getShareInfoText(state, link, false).then(shareInfoText => {
             RNCalendarEvents.findEventById(id).then(event => {
                 const updateText
                     = event.description
