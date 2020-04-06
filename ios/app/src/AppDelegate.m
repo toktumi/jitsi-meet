@@ -40,10 +40,10 @@
 
     jitsiMeet.conferenceActivityType = JitsiMeetConferenceActivityType;
     jitsiMeet.customUrlScheme = @"com.evoice.meet";
-    jitsiMeet.universalLinkDomains = @[@"meet.evoice.com"];
+    jitsiMeet.universalLinkDomains = @[@"j2meet.evoice.com"];
 
     jitsiMeet.defaultConferenceOptions = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
-        builder.serverURL = [NSURL URLWithString:@"https://qameet.evoice.com/"];
+        builder.serverURL = [NSURL URLWithString:@"https://j2meet.evoice.com/"];
         builder.welcomePageEnabled = YES;
 
         // Apple rejected our app because they claim requiring a
@@ -52,6 +52,9 @@
         [builder setFeatureFlag:@"ios.recording.enabled" withBoolean:YES];
 #endif
     }];
+
+    // Force longer display of the spalsh screen on first lanuch.
+    sleep(3);
 
     [jitsiMeet application:application didFinishLaunchingWithOptions:launchOptions];
 
