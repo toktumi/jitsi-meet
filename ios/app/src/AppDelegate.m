@@ -48,9 +48,9 @@
 
         // Apple rejected our app because they claim requiring a
         // Dropbox account for recording is not acceptable.
-#if DEBUG
+//#if DEBUG
         [builder setFeatureFlag:@"ios.recording.enabled" withBoolean:YES];
-#endif
+//#endif
     }];
 
     // Force longer display of the spalsh screen on first lanuch.
