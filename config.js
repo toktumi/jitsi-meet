@@ -291,7 +291,8 @@ var config = {
 
     // Enables calendar integration, depends on googleApiApplicationClientID
     // and microsoftApiApplicationClientID
-    // enableCalendarIntegration: false,
+    enableCalendarIntegration: true,
+    googleApiApplicationClientID: '362536661455-jjqam6sfkd6pldk2fa22315c5nk329kl.apps.googleusercontent.com',
 
     // Stats
     //
