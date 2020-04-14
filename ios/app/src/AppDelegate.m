@@ -40,10 +40,10 @@
 
     jitsiMeet.conferenceActivityType = JitsiMeetConferenceActivityType;
     jitsiMeet.customUrlScheme = @"com.evoice.meet";
-    jitsiMeet.universalLinkDomains = @[@"j2meet.evoice.com"];
+    jitsiMeet.universalLinkDomains = @[@"qameet.evoice.com"];
 
     jitsiMeet.defaultConferenceOptions = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
-        builder.serverURL = [NSURL URLWithString:@"https://j2meet.evoice.com/"];
+        builder.serverURL = [NSURL URLWithString:@"https://qameet.evoice.com/"];
         builder.welcomePageEnabled = YES;
 
         [builder setFeatureFlag:@"ios.recording.enabled" withBoolean:YES];
