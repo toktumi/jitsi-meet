@@ -462,7 +462,7 @@
         "expandedOn": "The meeting is currently being recorded.",
         "expandedPending": "Recording is being started...",
         "failedToStart": "Recording failed to start",
-        "fileSharingdescription": "Share recording with meeting participants",
+        "fileSharingdescription": "Call recordings can only be retrieved by eVoice customers.",
         "live": "LIVE",
         "loggedIn": "Logged in as {{userName}}",
         "off": "Recording stopped",
