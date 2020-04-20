@@ -89,7 +89,7 @@ public class MainActivity extends JitsiMeetActivity {
         JitsiMeetConferenceOptions defaultOptions
             = new JitsiMeetConferenceOptions.Builder()
                 .setWelcomePageEnabled(true)
-                .setServerURL(buildURL("https://j2meet.evoice.com"))
+                .setServerURL(buildURL("https://qameet.evoice.com"))
                 .setFeatureFlag("call-integration.enabled", false)
                 .build();
         JitsiMeet.setDefaultConferenceOptions(defaultOptions);
