@@ -198,7 +198,11 @@ var config = {
     // (e.g. meeting participants), based on the actual implementation
     // on the backend.
     // fileRecordingsServiceSharingEnabled: false,
+	fileRecordingsEnabled: true,
+	fileRecordingsServiceEnabled: true,
+	fileRecordingsServiceSharingEnabled: true,
 
+	hiddenDomain: 'recorder.qameet.evoice.com',
     // Whether to enable live streaming or not.
     // liveStreamingEnabled: false,
 
