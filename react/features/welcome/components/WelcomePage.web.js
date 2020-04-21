@@ -8,8 +8,7 @@ import { connect } from '../../base/redux';
 import { isMobileBrowser } from '../../base/environment/utils';
 import { CalendarList } from '../../calendar-sync';
 import { RecentList } from '../../recent-list';
-import { SettingsButton, SETTINGS_TABS } from '../../settings';
-
+import { openSettingsDialog,SettingsButton, SETTINGS_TABS } from '../../settings';
 import { AbstractWelcomePage, _mapStateToProps } from './AbstractWelcomePage';
 import Tabs from './Tabs';
 
@@ -211,7 +210,8 @@ class WelcomePage extends AbstractWelcomePage {
                                     value = { this.state.room } />
                             </form>
                         </div>
-                        <div
+                    
+                      <div
                             className = 'welcome-page-button'
                             id = 'enter_room_button'
                             onClick = { this._onFormSubmit }>
@@ -243,9 +243,20 @@ class WelcomePage extends AbstractWelcomePage {
     _onFormSubmit(event) {
         event.preventDefault();
 
+       var obj = JSON.parse(localStorage.getItem("features/base/settings"));
+        
+        if(obj.displayName == undefined || obj.email == undefined)
+        {
+            this.props.dispatch(openSettingsDialog(SETTINGS_TABS.PROFILE));
+        }
+        else {
+
         if (!this._roomInputRef || this._roomInputRef.reportValidity()) {
             this._onJoin();
+            }
         }
+
+        
     }
 
     /**

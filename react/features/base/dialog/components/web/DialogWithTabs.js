@@ -245,12 +245,42 @@ class DialogWithTabs extends Component<Props, State> {
      */
     _onSubmit() {
         const { onSubmit, tabs } = this.props;
+        
+        var shouldClose = true;
 
         tabs.forEach(({ submit }, idx) => {
+
+            if(tabs[idx].name == 'profile_tab')
+            {
+                    if(this.state.tabStates[idx].displayName == '' || this.state.tabStates[idx].email == '')
+                    {
+                        shouldClose = false;
+                         alert('Please Enter the Name / Email.');
+                         return false;
+                       
+                    }
+
+                    if(this.state.tabStates[idx].email != '')
+                        {
+                            var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                            if(!regex.test(this.state.tabStates[idx].email))
+                            {
+                                shouldClose = false;
+                                alert('Please Enter a valid Email.');
+                                return false;
+                            }
+                        }
+            }
+
+
             submit && submit(this.state.tabStates[idx]);
+
         });
 
-        onSubmit();
+        if(shouldClose){
+            onSubmit();
+        }
+        
     }
 }
 
