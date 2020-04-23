@@ -1,6 +1,6 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.evoice.meet">
+    package="org.jitsi.meet">
   <application
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
@@ -24,8 +24,8 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.BROWSABLE" />
         <category android:name="android.intent.category.DEFAULT" />
-        <data android:host="meet.evoice.com" android:scheme="https" />
-        <data android:host="meet.evoice.com" android:scheme="https" />
+        <data android:host="j2meet.evoice.com" android:scheme="https" />
+        <data android:host="qameet.evoice.com" android:scheme="https" />
         <data android:host="meet.evoice.com" android:scheme="https" />
       </intent-filter>
       <intent-filter>
