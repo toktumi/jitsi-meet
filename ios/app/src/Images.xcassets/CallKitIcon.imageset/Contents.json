@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "eVoice-meet-iconmask.png",
+      "filename" : "evoice-meet-iconmask@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "eVoice-meet-iconmask@2x.png",
+      "filename" : "evoice-meet-iconmask@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "eVoice-meet-iconmask@3x.png",
+      "filename" : "evoice-meet-iconmask@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
