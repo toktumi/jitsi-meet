@@ -196,6 +196,13 @@ StateListenerRegistry.register(
                 JitsiConferenceEvents.PARTICIPANT_PROPERTY_CHANGED,
                 (participant, propertyName, oldValue, newValue) => {
                     switch (propertyName) {
+                    case 'features_e2ee':
+                        store.dispatch(participantUpdated({
+                            conference,
+                            id: participant.getId(),
+                            e2eeSupported: newValue
+                        }));
+                        break;
                     case 'features_jigasi':
                         store.dispatch(participantUpdated({
                             conference,
@@ -343,7 +350,9 @@ function _participantJoinedOrUpdated({ dispatch, getState }, next, action) {
     // to the new avatar and emit out change events if necessary.
     const result = next(action);
 
-    if (avatarURL || email || id || name) {
+    const { disableThirdPartyRequests } = getState()['features/base/config'];
+
+    if (!disableThirdPartyRequests && (avatarURL || email || id || name)) {
         const participantId = !id && local ? getLocalParticipant(getState()).id : id;
         const updatedParticipant = getParticipantById(getState(), participantId);
 
